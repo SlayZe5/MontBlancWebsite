@@ -3,6 +3,7 @@
   padding: 0
 }
 
+
 /* FOND */
 
 .container {
@@ -59,7 +60,7 @@ nav ul li a {
 
 }
 
-col {
+.col {
   flex-basis: 50% ;
 
 }
@@ -150,36 +151,125 @@ h5 {
   width: 100%;
   overflow: hidden;
   background-color: white;
-}
-
-.sec2 .container2 {
-  width: 100%;
-  height: 130vh;
+  background-image: url(img/backgroundsec3.png);
   background-position: center;
   background-size: cover;
   padding-left: 8%;
   padding-right: 8%;
-  box-sizing: border-box;
+  box-sizing: border-box
+  
 }
 
-h1 {
-  color: white;
-  font-size: 35px;
-}
-.sec2 .row {
-  display: flex;
-  height: 50%;
+
+
+
+.sec2 .roww {
+   display: flex;
   align-items: center;
   background-color: #081b2c;
-  margin-top: 100px;
-  margin-left: 15px;
+  margin-top: 70px;
+  margin-left: -110px;
   width: 1200px;
-  border: 0;
   border-radius: 60px;
-  outline: none;
+  padding: 40px;
+  font-family: Cambria, Cochin, Georgia, serif;
 }
 
-.sec2 .col {
+.sec2 .coll {
   flex-basis: 50% ;
+  display: flex;
+  flex-direction: column;
 
+}
+
+
+.sec2-img {
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.sec2 h1 {
+  font-size: 50px;  
+  margin-bottom: 15px;
+}
+
+.sec2 p {
+  font-size: 15px;
+  line-height: 25px;      
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 0.95;
+    transform: translateX(0);
+  }
+}
+
+.sec2 .roww {
+  opacity: 0;
+}
+
+.sec2 .roww.visible {
+  animation: slideFromLeft 1s ease forwards;
+}
+
+.sec2 .rowww {
+  display: flex;
+  align-items: center;
+  background-color: #c99088;
+  margin-top: 70px;
+  margin-left: 390px;
+  width: 1200px;
+  border-radius: 60px;
+  padding: 40px;
+  flex-direction: row-reverse;
+  font-family: Cambria, Cochin, Georgia, serif;
+}
+
+.sec2 .colll.rev {
+  flex-basis: 50% ;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.sec22-img {
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.sec2 .hs {
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 90px;
+  font-family: Cambria, Cochin, Georgia, serif;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 0.95;
+    transform: translateX(0);
+  }
+}
+
+.sec2 .rowww {
+  opacity: 0; 
+}
+
+.sec2 .rowww.visible {
+  animation: slideFromRight 1s ease forwards;
 }
