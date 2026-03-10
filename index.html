@@ -64,9 +64,52 @@
     </div>
   </div>
   <div class="sec2">
-    <div class="row">
-      <div class="col">
-        <h1>Mont Blanc</h1>
-      </div> 
+    <div class="roww">
+      <div class="coll">
+        <img src="img/imagesec2.png" class="sec2-img">
+      </div>
+      <div class="coll">
+        <h1>Ascension</h1>
+        <p>Le Mont Blanc, sommet le plus élevé d’Europe occidentale avec ses 4 810 mètres,
+           a attiré les aventuriers depuis le 18ᵉ siècle. L’ascension historique a été 
+           réalisée le 8 août 1786 par Jacques Balmat et Michel Paccard, marquant la naissance 
+           de l’alpinisme. Depuis, le Mont Blanc symbolise l’esprit d’aventure et la conquête 
+           des montagnes, attirant des alpinistes du monde entier malgré ses conditions exigeantes.</p>
+      </div>
+    </div>
+    <div class="rowww">
+      <div class="colll">
+        <img src="img/imagesec22.png" class="sec22-img">
+      </div>
+      <div class="coll">
+        <h1>Symbole moderne</h1>
+        <p>Aujourd’hui, le Mont Blanc reste un symbole d’aventure, de dépassement de soi et de lien entre l’homme et la nature.
+          Il influence la mode, le tourisme et même la gastronomie locale, avec des produits comme le fromage et le miel des Alpes.</p>
+      </div>
     </div>
   </div>
+  </div>
+  <script>
+  // FAIT UNE ANIMATION QUAND ON CHANGE DE LA SECTION 1 A LA 2
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(document.querySelector('.roww'));
+
+  const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer2.observe(document.querySelector('.rowww'));
+
+  
+</script>
